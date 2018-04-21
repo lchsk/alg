@@ -29,3 +29,6 @@ target_link_libraries(test_stack ${GTEST_LIBRARIES})
 add_executable(test_bag test_bag.cpp)
 target_link_libraries(test_bag ${GTEST_LIBRARIES})
 
+# graph
+add_executable(test_graph test_graph.cpp)
+target_link_libraries(test_graph ${GTEST_LIBRARIES})
