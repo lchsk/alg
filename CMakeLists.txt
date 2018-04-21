@@ -31,7 +31,3 @@ endif()
 
 message(STATUS "CMAKE_CXX_FLAGS: " ${CMAKE_CXX_FLAGS} )
 message(STATUS "BUILD_SHARED_LIBS: " ${BUILD_SHARED_LIBS} )
-
-add_executable("stack"
-    src/stack.cpp
-)
