@@ -30,6 +30,10 @@ public:
 		n++;
 	}
 
+	Node* get_head() const {
+		return first.get();
+	}
+
 private:
 	std::unique_ptr<Node> first;
 	int n;
