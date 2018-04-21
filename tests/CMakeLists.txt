@@ -21,11 +21,11 @@ find_package(GTest REQUIRED)
 message(STATUS "GTEST_INCLUDE_DIRS:" ${GTEST_INCLUDE_DIRS})
 message(STATUS "GTEST_LIBRARIES:" ${GTEST_LIBRARIES})
 
-add_executable(test_stack
-  test_stack.cpp
-  # ../src/stack.hpp
-  )
+# stack
+add_executable(test_stack test_stack.cpp)
+target_link_libraries(test_stack ${GTEST_LIBRARIES})
 
-target_link_libraries(test_stack
-  ${GTEST_LIBRARIES}
-  )
+# bag
+add_executable(test_bag test_bag.cpp)
+target_link_libraries(test_bag ${GTEST_LIBRARIES})
+
