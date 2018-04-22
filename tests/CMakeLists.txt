@@ -32,3 +32,7 @@ target_link_libraries(test_bag ${GTEST_LIBRARIES})
 # graph
 add_executable(test_graph test_graph.cpp)
 target_link_libraries(test_graph ${GTEST_LIBRARIES})
+
+# depth_first_paths
+add_executable(test_depth_first_paths test_depth_first_paths.cpp)
+target_link_libraries(test_depth_first_paths ${GTEST_LIBRARIES})
