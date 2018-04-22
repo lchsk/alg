@@ -35,6 +35,18 @@ TEST(Bag, iteration)
         FAIL();
 }
 
+TEST(Bag, get_vector)
+{
+    Bag<int> b;
+    b.add(1);
+    b.add(2);
+    b.add(3);
+
+    const std::vector<int> v = b.get_vector();
+
+    ASSERT_EQ(v, std::vector<int>({3, 2, 1}));
+}
+
 int main (int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
 

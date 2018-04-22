@@ -34,6 +34,23 @@ public:
 		return first.get();
 	}
 
+	const std::vector<T> get_vector() const {
+		Node* node = get_head();
+
+		std::vector<T> v(size());
+
+		int i = 0;
+
+		while (node != nullptr) {
+			v[i] = node->item;
+			node = node->next.get();
+
+			i++;
+		}
+
+		return v;
+	}
+
 private:
 	std::unique_ptr<Node> first;
 	int n;
