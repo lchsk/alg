@@ -34,6 +34,18 @@ TEST(Stack, stack_of_ints)
     EXPECT_EQ(s.pop(), 1);
 }
 
+TEST(Stack, get_vector)
+{
+    Stack<int> s;
+    s.push(1);
+    s.push(2);
+    s.push(3);
+
+    const std::vector<int> v = s.get_vector();
+
+    ASSERT_EQ(v, std::vector<int>({3, 2, 1}));
+}
+
 int main (int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
 
